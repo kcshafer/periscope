@@ -1,0 +1,9 @@
+<project name="Periscope build" default="build" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <target name="build">
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="src"/>
+    </target>
+</project>
